@@ -1,10 +1,10 @@
 [
-  { "titulo": "Lo que el silencio confesó", "url": "", "plataforma": "tiktok", "fecha": "2026-11-03" },
-  { "titulo": "Autopsia de una despedida", "url": "", "plataforma": "youtube", "fecha": "2026-10-30" },
-  { "titulo": "La calle donde te dejé de esperar", "url": "", "plataforma": "tiktok", "fecha": "2026-10-26" },
-  { "titulo": "Evidencia Nº 3: tus mensajes", "url": "", "plataforma": "youtube", "fecha": "2026-10-22" },
-  { "titulo": "Cuando la lluvia sabe tu nombre", "url": "", "plataforma": "tiktok", "fecha": "2026-10-17" },
-  { "titulo": "Caso cerrado", "url": "", "plataforma": "youtube", "fecha": "2026-10-11" },
-  { "titulo": "Lo que nunca te dije", "url": "", "plataforma": "tiktok", "fecha": "2026-10-06" },
-  { "titulo": "Diagnóstico: te sigo extrañando", "url": "", "plataforma": "youtube", "fecha": "2026-10-01" }
+  { "titulo": "Lo que el silencio confesó", "url": "", "plataforma": "tiktok", "fecha": "2026-11-03", "provisional": true },
+  { "titulo": "Autopsia de una despedida", "url": "", "plataforma": "youtube", "fecha": "2026-10-30", "provisional": true },
+  { "titulo": "La calle donde te dejé de esperar", "url": "", "plataforma": "tiktok", "fecha": "2026-10-26", "provisional": true },
+  { "titulo": "Evidencia Nº 3: tus mensajes", "url": "", "plataforma": "youtube", "fecha": "2026-10-22", "provisional": true },
+  { "titulo": "Cuando la lluvia sabe tu nombre", "url": "", "plataforma": "tiktok", "fecha": "2026-10-17", "provisional": true },
+  { "titulo": "Caso cerrado", "url": "", "plataforma": "youtube", "fecha": "2026-10-11", "provisional": true },
+  { "titulo": "Lo que nunca te dije", "url": "", "plataforma": "tiktok", "fecha": "2026-10-06", "provisional": true },
+  { "titulo": "Diagnóstico: te sigo extrañando", "url": "", "plataforma": "youtube", "fecha": "2026-10-01", "provisional": true }
 ]

@@ -2,30 +2,30 @@
   { "texto": "Cada día es una nueva oportunidad para empezar de nuevo.", "categoria": "crecimiento", "fecha": "2026-11-04" },
   { "texto": "Lo que haces hoy construye lo que serás mañana.", "categoria": "reflexiones", "fecha": "2026-11-03" },
 
-  { "texto": "No te fuiste de golpe. Te fuiste en cada mensaje que tardabas más en contestar.", "categoria": "desamor", "fecha": "2026-11-02" },
-  { "texto": "La causa de muerte no fue la despedida. Fueron todas las veces que fingimos que estábamos bien.", "categoria": "desamor", "fecha": "2026-10-28" },
-  { "texto": "Me enseñaste que se puede extrañar a alguien que todavía está.", "categoria": "desamor", "fecha": "2026-10-19" },
+  { "texto": "No te fuiste de golpe. Te fuiste en cada mensaje que tardabas más en contestar.", "categoria": "desamor", "fecha": "2026-11-02", "provisional": true },
+  { "texto": "La causa de muerte no fue la despedida. Fueron todas las veces que fingimos que estábamos bien.", "categoria": "desamor", "fecha": "2026-10-28", "provisional": true },
+  { "texto": "Me enseñaste que se puede extrañar a alguien que todavía está.", "categoria": "desamor", "fecha": "2026-10-19", "provisional": true },
 
-  { "texto": "Hay canciones que no se escuchan: se sobreviven.", "categoria": "nostalgia", "fecha": "2026-11-01" },
-  { "texto": "Volví a la calle donde nos despedimos. El semáforo seguía cambiando de color, como si nada hubiera pasado.", "categoria": "nostalgia", "fecha": "2026-10-25" },
-  { "texto": "La nostalgia es volver a un lugar que ya no existe, con una llave que todavía guardas.", "categoria": "nostalgia", "fecha": "2026-10-12" },
+  { "texto": "Hay canciones que no se escuchan: se sobreviven.", "categoria": "nostalgia", "fecha": "2026-11-01", "provisional": true },
+  { "texto": "Volví a la calle donde nos despedimos. El semáforo seguía cambiando de color, como si nada hubiera pasado.", "categoria": "nostalgia", "fecha": "2026-10-25", "provisional": true },
+  { "texto": "La nostalgia es volver a un lugar que ya no existe, con una llave que todavía guardas.", "categoria": "nostalgia", "fecha": "2026-10-12", "provisional": true },
 
-  { "texto": "Aprendí a cenar en silencio sin que el silencio me doliera.", "categoria": "soledad", "fecha": "2026-10-30" },
-  { "texto": "No estoy solo. Estoy conmigo, que es distinto, aunque a veces cueste notarlo.", "categoria": "soledad", "fecha": "2026-10-21" },
-  { "texto": "Las tres de la mañana tienen la mala costumbre de decir la verdad.", "categoria": "soledad", "fecha": "2026-10-08" },
+  { "texto": "Aprendí a cenar en silencio sin que el silencio me doliera.", "categoria": "soledad", "fecha": "2026-10-30", "provisional": true },
+  { "texto": "No estoy solo. Estoy conmigo, que es distinto, aunque a veces cueste notarlo.", "categoria": "soledad", "fecha": "2026-10-21", "provisional": true },
+  { "texto": "Las tres de la mañana tienen la mala costumbre de decir la verdad.", "categoria": "soledad", "fecha": "2026-10-08", "provisional": true },
 
-  { "texto": "No todo lo que se rompe necesita arreglo. A veces solo necesita ser entendido.", "categoria": "reflexiones", "fecha": "2026-10-27" },
-  { "texto": "Toda herida deja huellas. El trabajo no es borrarlas, es aprender a leerlas.", "categoria": "reflexiones", "fecha": "2026-10-15" },
+  { "texto": "No todo lo que se rompe necesita arreglo. A veces solo necesita ser entendido.", "categoria": "reflexiones", "fecha": "2026-10-27", "provisional": true },
+  { "texto": "Toda herida deja huellas. El trabajo no es borrarlas, es aprender a leerlas.", "categoria": "reflexiones", "fecha": "2026-10-15", "provisional": true },
 
-  { "texto": "El amor de verdad no te pide que te hagas pequeño para caber en su vida.", "categoria": "amor", "fecha": "2026-10-29" },
-  { "texto": "Quiero un amor que no se parezca a una escena del crimen.", "categoria": "amor", "fecha": "2026-10-18" },
-  { "texto": "Amar bien también es saber quedarse cuando nada se está cayendo.", "categoria": "amor", "fecha": "2026-10-05" },
+  { "texto": "El amor de verdad no te pide que te hagas pequeño para caber en su vida.", "categoria": "amor", "fecha": "2026-10-29", "provisional": true },
+  { "texto": "Quiero un amor que no se parezca a una escena del crimen.", "categoria": "amor", "fecha": "2026-10-18", "provisional": true },
+  { "texto": "Amar bien también es saber quedarse cuando nada se está cayendo.", "categoria": "amor", "fecha": "2026-10-05", "provisional": true },
 
-  { "texto": "Todavía sé de memoria el camino a tu casa. Lo que olvidé es por qué seguía yendo.", "categoria": "recuerdos", "fecha": "2026-10-26" },
-  { "texto": "Los recuerdos no se borran: se archivan en carpetas que un día dejas de abrir.", "categoria": "recuerdos", "fecha": "2026-10-14" },
-  { "texto": "Guardé tu voz en un audio que nunca me atreví a borrar ni a escuchar.", "categoria": "recuerdos", "fecha": "2026-10-02" },
+  { "texto": "Todavía sé de memoria el camino a tu casa. Lo que olvidé es por qué seguía yendo.", "categoria": "recuerdos", "fecha": "2026-10-26", "provisional": true },
+  { "texto": "Los recuerdos no se borran: se archivan en carpetas que un día dejas de abrir.", "categoria": "recuerdos", "fecha": "2026-10-14", "provisional": true },
+  { "texto": "Guardé tu voz en un audio que nunca me atreví a borrar ni a escuchar.", "categoria": "recuerdos", "fecha": "2026-10-02", "provisional": true },
 
-  { "texto": "Sanar no es olvidar lo que pasó. Es dejar de volver a la escena todos los días.", "categoria": "crecimiento", "fecha": "2026-10-31" },
-  { "texto": "Cerré el caso. No porque encontré respuestas, sino porque dejé de necesitarlas.", "categoria": "crecimiento", "fecha": "2026-10-20" },
-  { "texto": "Un día te das cuenta de que la persona que te iba a salvar eras tú.", "categoria": "crecimiento", "fecha": "2026-10-10" }
+  { "texto": "Sanar no es olvidar lo que pasó. Es dejar de volver a la escena todos los días.", "categoria": "crecimiento", "fecha": "2026-10-31", "provisional": true },
+  { "texto": "Cerré el caso. No porque encontré respuestas, sino porque dejé de necesitarlas.", "categoria": "crecimiento", "fecha": "2026-10-20", "provisional": true },
+  { "texto": "Un día te das cuenta de que la persona que te iba a salvar eras tú.", "categoria": "crecimiento", "fecha": "2026-10-10", "provisional": true }
 ]

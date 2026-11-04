@@ -6,9 +6,9 @@
   "frasesPorPagina": 12,
 
   "redes": {
-    "tiktok":   { "url": "", "usuario": "@tupsicologoforense" },
-    "youtube":  { "url": "", "usuario": "@tupsicologoforense" },
-    "facebook": { "url": "", "usuario": "Tu Psicólogo Forense" }
+    "tiktok":   { "url": "", "usuario": "" },
+    "youtube":  { "url": "", "usuario": "" },
+    "facebook": { "url": "", "usuario": "" }
   },
 
   "categorias": [

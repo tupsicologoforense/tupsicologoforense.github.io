@@ -26,6 +26,8 @@ Copia un bloque, pégalo **al principio de la lista** (justo después de `[`) y 
 - Las frases se ordenan solas por fecha (la más reciente primero) y reciben su número de «Evidencia Nº».
 - Si escribes una categoría nueva (por ejemplo `"categoria": "perdón"`), aparece sola como filtro.
 
+> 🟡 **Contenido provisional.** Solo las 2 primeras frases son tuyas. Las otras 20 son ejemplos escritos para mostrar el diseño y llevan `"provisional": true`. Para reemplazarlas, busca `provisional` en el archivo y cambia o borra esas líneas. A los visitantes no se les muestra ninguna marca: es solo para que tú las identifiques.
+
 ### Añadir un video → `datos/videos.json`
 
 Pega el enlace del video tal cual lo copias de la app:
@@ -38,6 +40,7 @@ Pega el enlace del video tal cual lo copias de la app:
 - **YouTube Shorts**: sirven `youtube.com/shorts/...`, `youtu.be/...` o `youtube.com/watch?v=...`. La miniatura se obtiene automáticamente.
 - **Miniatura propia (opcional)**: sube una imagen vertical a `assets/img/` y añade `"miniatura": "assets/img/mi-portada.jpg"`.
 - **Video sin enlace todavía**: deja `"url": ""` y pon `"plataforma": "tiktok"` o `"youtube"`; aparecerá como «Próximamente», sin botones rotos.
+- **Los 8 videos actuales son espacios provisionales** (`"provisional": true`): tienen títulos de muestra y ningún enlace, así que se ven como «Próximamente». Cámbialos por tus videos reales o bórralos.
 - **Video propio (MP4)**: súbelo a `videos/` y usa `"archivo": "videos/mi-video.mp4"` en lugar de `url` (máx. 100 MB por archivo en GitHub).
 
 ### Tus redes y textos → `datos/config.json`
@@ -50,7 +53,7 @@ Pega el enlace del video tal cual lo copias de la app:
 }
 ```
 
-Mientras una `url` esté vacía, esa red se muestra como «Próximamente».
+Ahora mismo todas las `url` y los `usuario` están vacíos a propósito. Mientras una `url` esté vacía, esa red se muestra como «Próximamente».
 En este mismo archivo puedes cambiar la **frase principal**, la **presentación**, cuántas frases se muestran por página y las categorías.
 Si quieres una foto real en la portada (por ejemplo, una calle tuya bajo la lluvia), súbela a `assets/img/` y escribe su ruta en `"imagenPortada"`.
 
@@ -66,12 +69,14 @@ Si algo queda mal escrito, la página no se rompe: muestra un aviso que dice qu�
 
 ## 🚀 Publicar en GitHub Pages
 
-1. Sube este proyecto a un repositorio de GitHub.
-2. En el repositorio: **Settings → Pages → Source: Deploy from a branch**, rama `main`, carpeta `/ (root)`.
-3. Tu sitio quedará en `https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/`.
-4. Para que la imagen se vea al compartir en WhatsApp y Facebook, cambia en `index.html` la línea
-   `<meta property="og:image" content="assets/img/compartir.jpg">` por la dirección completa, por ejemplo
-   `https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/assets/img/compartir.jpg`.
+Dirección prevista: **<https://kennyelproxx.github.io/tu-psicologo-forense-web/>**
+
+1. **Renombra el repositorio** de `tu-psic-logo-forense-web` a `tu-psicologo-forense-web` (**Settings → General → Repository name**). GitHub Pages usa el nombre del repositorio en la dirección; si no lo renombras, la vista previa al compartir no funcionará.
+2. **Settings → Pages → Source: Deploy from a branch**, rama `main`, carpeta `/ (root)`.
+3. Espera 1–2 minutos y abre la dirección.
+4. Para comprobar la vista previa: pega la dirección en el [Depurador de Facebook](https://developers.facebook.com/tools/debug/) y pulsa «Volver a extraer». WhatsApp guarda la vista previa en caché; si cambias la imagen, puede tardar en actualizarse.
+
+La vista previa (`assets/img/compartir.jpg`, 1200×630) y las URL de `index.html` (`og:url`, `og:image`, `twitter:image` y `canonical`) ya apuntan a esa dirección. Si algún día cambia, actualiza esas líneas.
 
 ## 👀 Verlo en tu computadora antes de publicar
 
