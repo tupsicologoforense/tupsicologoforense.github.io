@@ -492,7 +492,8 @@
       titulo: String(v.titulo ?? '').trim() || 'Sin título', fecha: leerFecha(v.fecha),
       plataforma: normalizar(v.plataforma) || '', url: urlValida(url) ? url : '',
       miniatura: String(v.miniatura ?? '').trim(), insertar: null, archivo: '', indice: i,
-      provisional: v.provisional === true, fotos: false
+      provisional: v.provisional === true, fotos: false,
+      clip: String(v.clip ?? '').trim() // vista previa corta en bucle (mp4 sin sonido)
     };
     if (datos.url) {
       const u = new URL(datos.url), host = u.hostname.replace(/^www\.|^m\./, '');
@@ -532,6 +533,7 @@
     const contenido = `
       <span class="clip__poster" style="--tono:${(205 + v.indice * 37) % 360}"><svg class="clip__silueta" style="--giro:${(v.indice % 2 ? 1 : -1) * (6 + v.indice * 5 % 14)}deg" aria-hidden="true"><use href="#silueta"/></svg><span class="marcador clip__marcador"><svg><use href="#marcador"/></svg><b>${v.indice + 1}</b></span></span>
       ${v.miniatura ? `<img class="clip__img" src="${esc(v.miniatura)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ''}
+      ${v.clip && !movimientoReducido ? `<video class="clip__vid" data-src="${esc(v.clip)}" muted loop playsinline preload="none" disablepictureinpicture aria-hidden="true"></video>` : ''}
       <span class="clip__plataforma">${icono}${esc(NOMBRE_PLATAFORMA[v.plataforma] || 'Video')}${v.fotos ? ' · Fotos' : ''}</span>
       ${v.estado === 'pronto' ? '<span class="clip__pronto">Próximamente</span>' : '<span class="clip__play"><svg aria-hidden="true"><use href="#i-play"/></svg></span>'}
       <span class="clip__info"><h3>${esc(v.titulo)}</h3>${v.fecha ? `<time datetime="${fechaISO(v.fecha)}">${fechaLarga(v.fecha)}</time>` : ''}</span>`;
@@ -547,7 +549,16 @@
     const lista = estado.videos.filter(v => estado.plataforma === 'todos' || v.plataforma === estado.plataforma);
     $('#galeria').innerHTML = lista.map(clipHTML).join('');
     $('#videosVacio').hidden = lista.length > 0;
+    $$('#galeria .clip__vid').forEach(v => observadorClips.observe(v));
   }
+
+  // Las vistas previas solo se descargan y reproducen mientras la tarjeta está a la vista
+  const observadorClips = new IntersectionObserver(entradas => entradas.forEach(({ target: v, isIntersecting }) => {
+    if (isIntersecting) {
+      if (!v.src) v.src = v.dataset.src;
+      v.play().then(() => v.classList.add('reproduciendo')).catch(() => { /* reproducción automática bloqueada: queda la portada */ });
+    } else v.pause();
+  }), { threshold: .4 });
 
   async function miniaturaTikTok(v) { // TikTok ofrece la miniatura públicamente mediante oEmbed
     try {
