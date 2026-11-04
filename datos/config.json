@@ -1,0 +1,23 @@
+{
+  "marca": "Tu Psicólogo Forense",
+  "frasePrincipal": "Analizo lo que el amor dejó en la escena.",
+  "presentacion": "Un archivo de frases y videos para quienes todavía caminan de noche por calles que ya no llevan a nadie. Aquí no se resuelven crímenes: se examinan heridas, se nombra lo que dolió y se aprende a seguir.",
+  "imagenPortada": "",
+  "frasesPorPagina": 12,
+
+  "redes": {
+    "tiktok":   { "url": "", "usuario": "@tupsicologoforense" },
+    "youtube":  { "url": "", "usuario": "@tupsicologoforense" },
+    "facebook": { "url": "", "usuario": "Tu Psicólogo Forense" }
+  },
+
+  "categorias": [
+    { "id": "desamor",     "nombre": "Desamor" },
+    { "id": "nostalgia",   "nombre": "Nostalgia" },
+    { "id": "soledad",     "nombre": "Soledad" },
+    { "id": "reflexiones", "nombre": "Reflexiones" },
+    { "id": "amor",        "nombre": "Amor" },
+    { "id": "recuerdos",   "nombre": "Recuerdos" },
+    { "id": "crecimiento", "nombre": "Crecimiento personal" }
+  ]
+}
