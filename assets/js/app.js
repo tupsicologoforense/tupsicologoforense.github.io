@@ -474,8 +474,8 @@
   function iniciarDestacada() {
     const lista = estado.frases;
     if (!lista.length) return pintarDestacada(null);
-    const dia = Math.floor(Date.now() / 864e5);
-    pintarDestacada(lista[dia % lista.length]);
+    // La evidencia del día es siempre la frase más reciente (la lista ya está ordenada por fecha)
+    pintarDestacada(lista[0]);
     $('#otraFrase').addEventListener('click', () => {
       if (lista.length < 2) return;
       let f; do { f = lista[Math.floor(Math.random() * lista.length)]; } while (f === estado.destacada);

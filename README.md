@@ -28,6 +28,14 @@ Copia un bloque, pégalo **al principio de la lista** (justo después de `[`) y 
 
 > 🟡 **Contenido provisional.** Solo las 2 primeras frases son tuyas. Las otras 20 son ejemplos escritos para mostrar el diseño y llevan `"provisional": true`. Para reemplazarlas, busca `provisional` en el archivo y cambia o borra esas líneas. A los visitantes no se les muestra ninguna marca: es solo para que tú las identifiques.
 
+### 🤖 Frase nueva automática cada día
+
+Todos los días, a primera hora de la mañana (hora de Perú), una tarea programada de Claude escribe una frase nueva en el tono de la marca, la añade al **principio** de `datos/frases.json` con la fecha del día y con `"auto": true`, y la publica. La frase más reciente aparece siempre en **«Evidencia del día»**.
+
+- Para encontrar las frases automáticas, busca `"auto": true`.
+- Puedes editar o borrar cualquiera como harías con las demás.
+- Si añades a mano una frase con la fecha de hoy antes de esa hora, la automática se añade igualmente; si no quieres que se publique, bórrala después.
+
 ### Añadir un video → `datos/videos.json`
 
 Pega el enlace del video tal cual lo copias de la app:
