@@ -491,14 +491,17 @@
     const datos = {
       titulo: String(v.titulo ?? '').trim() || 'Sin título', fecha: leerFecha(v.fecha),
       plataforma: normalizar(v.plataforma) || '', url: urlValida(url) ? url : '',
-      miniatura: String(v.miniatura ?? '').trim(), insertar: null, archivo: '', indice: i
+      miniatura: String(v.miniatura ?? '').trim(), insertar: null, archivo: '', indice: i,
+      provisional: v.provisional === true, fotos: false
     };
     if (datos.url) {
       const u = new URL(datos.url), host = u.hostname.replace(/^www\.|^m\./, '');
       if (/(^|\.)tiktok\.com$/.test(host)) {
         datos.plataforma = 'tiktok';
-        const id = u.pathname.match(/\/video\/(\d+)/)?.[1];
-        if (id) datos.insertar = `https://www.tiktok.com/player/v1/${id}?autoplay=1&rel=0&description=0`;
+        const [, tipo, id] = u.pathname.match(/\/(video|photo)\/(\d+)/) || [];
+        // Videos: reproductor oficial. Publicaciones de fotos (carrusel): inserción oficial de TikTok.
+        if (tipo === 'video') datos.insertar = `https://www.tiktok.com/player/v1/${id}?autoplay=1&rel=0&description=0`;
+        if (tipo === 'photo') { datos.insertar = `https://www.tiktok.com/embed/v2/${id}`; datos.fotos = true; }
       } else if (/(^|\.)(youtube\.com|youtu\.be)$/.test(host)) {
         datos.plataforma = 'youtube';
         const id = host === 'youtu.be' ? u.pathname.split('/')[1] : (u.pathname.match(/\/(?:shorts|embed|live)\/([\w-]{6,})/)?.[1] || u.searchParams.get('v'));
@@ -529,7 +532,7 @@
     const contenido = `
       <span class="clip__poster" style="--tono:${(205 + v.indice * 37) % 360}"><svg class="clip__silueta" style="--giro:${(v.indice % 2 ? 1 : -1) * (6 + v.indice * 5 % 14)}deg" aria-hidden="true"><use href="#silueta"/></svg><span class="marcador clip__marcador"><svg><use href="#marcador"/></svg><b>${v.indice + 1}</b></span></span>
       ${v.miniatura ? `<img class="clip__img" src="${esc(v.miniatura)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : ''}
-      <span class="clip__plataforma">${icono}${esc(NOMBRE_PLATAFORMA[v.plataforma] || 'Video')}</span>
+      <span class="clip__plataforma">${icono}${esc(NOMBRE_PLATAFORMA[v.plataforma] || 'Video')}${v.fotos ? ' · Fotos' : ''}</span>
       ${v.estado === 'pronto' ? '<span class="clip__pronto">Próximamente</span>' : '<span class="clip__play"><svg aria-hidden="true"><use href="#i-play"/></svg></span>'}
       <span class="clip__info"><h3>${esc(v.titulo)}</h3>${v.fecha ? `<time datetime="${fechaISO(v.fecha)}">${fechaLarga(v.fecha)}</time>` : ''}</span>`;
     const etiqueta = `${esc(v.titulo)}${v.estado === 'pronto' ? ' (próximamente)' : ''}`;
@@ -559,7 +562,8 @@
     if (!Array.isArray(lista)) throw new Error('<code>datos/videos.json</code> debe empezar con <code>[</code> y terminar con <code>]</code>.');
     estado.videos = lista.filter(v => v && typeof v === 'object').map(analizarVideo)
       .map((v, i, arr) => ({ ...v, indice: arr.length - 1 - i }))
-      .sort((a, b) => (b.fecha?.getTime() ?? 0) - (a.fecha?.getTime() ?? 0));
+      // primero tus publicaciones reales (de la más nueva a la más antigua), al final los espacios provisionales
+      .sort((a, b) => (a.provisional - b.provisional) || ((b.fecha?.getTime() ?? 0) - (a.fecha?.getTime() ?? 0)));
     pintarVideos();
     estado.videos.filter(v => v.plataforma === 'tiktok' && v.url && !v.miniatura).forEach(miniaturaTikTok);
   }
