@@ -36,9 +36,8 @@
     <a href="./" id="inicio">Volver al inicio</a>
   </main>
   <script>
-    // En GitHub Pages de proyecto (usuario.github.io/repositorio/) el inicio está en /repositorio/
-    var seg = location.pathname.split('/')[1];
-    document.getElementById('inicio').href = /github\.io$/.test(location.hostname) && seg ? '/' + seg + '/' : '/';
+    // El sitio está en la raíz del dominio (tupsicologoforense.github.io), así que el inicio siempre es /
+    document.getElementById('inicio').href = '/';
   </script>
 </body>
 </html>

@@ -69,14 +69,14 @@ Si algo queda mal escrito, la página no se rompe: muestra un aviso que dice qu�
 
 ## 🚀 Publicar en GitHub Pages
 
-Dirección prevista: **<https://kennyelproxx.github.io/tu-psicologo-forense-web/>**
+Dirección prevista: **<https://tupsicologoforense.github.io/>**
 
-1. **Renombra el repositorio** de `tu-psic-logo-forense-web` a `tu-psicologo-forense-web` (**Settings → General → Repository name**). GitHub Pages usa el nombre del repositorio en la dirección; si no lo renombras, la vista previa al compartir no funcionará.
+1. El repositorio debe llamarse exactamente `tupsicologoforense.github.io` y pertenecer a la organización `tupsicologoforense`. Así la dirección queda en la raíz, sin nada después de la barra.
 2. **Settings → Pages → Source: Deploy from a branch**, rama `main`, carpeta `/ (root)`.
 3. Espera 1–2 minutos y abre la dirección.
 4. Para comprobar la vista previa: pega la dirección en el [Depurador de Facebook](https://developers.facebook.com/tools/debug/) y pulsa «Volver a extraer». WhatsApp guarda la vista previa en caché; si cambias la imagen, puede tardar en actualizarse.
 
-La vista previa (`assets/img/compartir.jpg`, 1200×630) y las URL de `index.html` (`og:url`, `og:image`, `twitter:image` y `canonical`) ya apuntan a esa dirección. Si algún día cambia, actualiza esas líneas.
+La vista previa (`assets/img/compartir.jpg`, 1200×630) y las URL de `index.html` (`og:url`, `og:image`, `twitter:image` y `canonical`) ya apuntan a esa dirección. Si algún día cambia (por ejemplo, con un dominio propio), actualiza esas líneas y la imagen.
 
 ## 👀 Verlo en tu computadora antes de publicar
 
